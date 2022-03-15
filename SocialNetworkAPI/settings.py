@@ -94,21 +94,22 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
+#
+# AUTH_PASSWORD_VALIDATORS = [
+#     {
+#         'NAME': 'django.contrib.authapp.password_validation.UserAttributeSimilarityValidator',
+#     },
+#     {
+#         'NAME': 'django.contrib.authapp.password_validation.MinimumLengthValidator',
+#     },
+#     {
+#         'NAME': 'django.contrib.authapp.password_validation.CommonPasswordValidator',
+#     },
+#     {
+#         'NAME': 'django.contrib.authapp.password_validation.NumericPasswordValidator',
+#     },
+# ]
 
-AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.authapp.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.authapp.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.authapp.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.authapp.password_validation.NumericPasswordValidator',
-    },
-]
 
 
 # Internationalization
@@ -179,3 +180,5 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
+
+AUTH_USER_MODEL = "User.NewUser"
